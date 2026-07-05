@@ -7,6 +7,7 @@ A Flutter trading journal app with analytics, trade logging, and overview dashbo
 This repository includes a GitHub Actions workflow for continuous integration and Android builds.
 
 ### What it does
+
 - runs Flutter analysis on every pull request and push to main
 - runs tests
 - builds a release APK
@@ -14,6 +15,7 @@ This repository includes a GitHub Actions workflow for continuous integration an
 - uploads both artifacts for download from GitHub Actions
 
 ### Setup notes
+
 1. Push this repository to GitHub.
 2. Ensure the default branch is named `main`.
 3. Trigger the workflow manually or push a commit to main.
