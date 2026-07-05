@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "290689204126",
+    "project_id": "tradelog-6a8b7",
+    "storage_bucket": "tradelog-6a8b7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:290689204126:android:0911a1b8d9acad4d71208f",
+        "android_client_info": {
+          "package_name": "trading.journal.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0WfFAIcmn9JfoGP49iQsWQOy9vdGmITo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
