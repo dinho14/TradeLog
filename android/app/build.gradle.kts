@@ -8,12 +8,6 @@ plugins {
     id("com.google.gms.google-services") version "4.4.4" apply false
 }
 
-def keystoreProperties = Properties()
-def keystorePropertiesFile = rootProject.file("key.properties")
-if (keystorePropertiesFile.exists()) {
-    keystorePropertiesFile.inputStream().use { keystoreProperties.load(it) }
-}
-
 android {
     namespace = "com.example.trading_journal_app"
     compileSdk = flutter.compileSdkVersion
@@ -39,21 +33,8 @@ android {
         versionName = flutter.versionName
     }
 
-    signingConfigs {
-        create("release") {
-            if (keystoreProperties.containsKey("storeFile") && keystoreProperties.containsKey("storePassword") &&
-                keystoreProperties.containsKey("keyAlias") && keystoreProperties.containsKey("keyPassword")) {
-                keyAlias = keystoreProperties.getProperty("keyAlias")
-                keyPassword = keystoreProperties.getProperty("keyPassword")
-                storeFile = file(keystoreProperties.getProperty("storeFile"))
-                storePassword = keystoreProperties.getProperty("storePassword")
-            }
-        }
-    }
-
     buildTypes {
         release {
-            signingConfig = signingConfigs.findByName("release") ?: signingConfigs.getByName("debug")
             isMinifyEnabled = false
             isShrinkResources = false
         }
@@ -63,4 +44,3 @@ android {
 flutter {
     source = "../.."
 }
-
